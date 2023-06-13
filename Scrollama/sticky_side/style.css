@@ -1,0 +1,29 @@
+/* import fonts locally*/
+@font-face {
+    font-family: 'Supreme';
+    src: url('../fonts/Supreme-Regular.otf');
+  }
+  
+
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+.intro__hed {
+    font-size: 50px; /* Adjust the size as desired */
+    font-family: "Arial", sans-serif; /* Specify the desired font */
+  }
+
+.header-title h1 {
+    font-size: 30rem;
+    margin: 0;
+  }
+
+  .title {
+    font-size: 60px;
+    /* margin-top: 100px; */
+    margin-bottom: 20px;
+    font-weight: bold;
+    }
