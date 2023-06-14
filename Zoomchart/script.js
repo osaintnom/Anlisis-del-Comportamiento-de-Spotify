@@ -70,3 +70,7 @@ d3.json("./flare.json", function(error, root) {
     circle.attr("r", function(d) { return d.r * k; });
   }
 });
+
+.append(svg)
+
+console.log('svg', svg)
