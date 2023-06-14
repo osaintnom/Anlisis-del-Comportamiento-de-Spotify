@@ -5,8 +5,7 @@ md
 
 function _2(md){return(
 md`
-\`\`\`js
-import { RadarChart } from "@rayraegah/radar-chart"
+\`\`\`
 \`\`\`
 `
 )}
@@ -28,21 +27,22 @@ function _3(d3,RadarChart)
   ////////////////////////// Data //////////////////////////////
   //////////////////////////////////////////////////////////////
 
+
   var data = [
     [
-      //iPhone
-      { axis: "Triste", value: 0.22 },
-      { axis: "Promedio", value: 0.28 },
-      { axis: "Feliz", value: 0.29 },
+      // Gerar
+      { axis: "Triste", value: 0.33 },
+      { axis: "Promedio", value: 0.53 },
+      { axis: "Feliz", value: 0.13 },
     ],
     [
-      //Samsung
+      // Oli
       { axis: "Triste", value: 0.27 },
       { axis: "Promedio", value: 0.16 },
       { axis: "Feliz", value: 0.35 },
     ],
     [
-      //Nokia Smartphone
+      // Valen
       { axis: "Triste", value: 0.26 },
       { axis: "Promedio", value: 0.1 },
       { axis: "Feliz", value: 0.3 },
@@ -463,9 +463,9 @@ require("d3@5")
 export default function define(runtime, observer) {
   const main = runtime.module();
   main.variable(observer()).define(["md"], _1);
-  main.variable(observer()).define(["md"], _2);
+  // main.variable(observer()).define(["md"], _2);
   main.variable(observer()).define(["d3","RadarChart"], _3);
   main.variable(observer("RadarChart")).define("RadarChart", ["d3","DOM"], _RadarChart);
-  main.variable(observer("d3")).define("d3", ["require"], _d3);
+  // main.variable(observer("d3")).define("d3", ["require"], _d3);
   return main;
 }
