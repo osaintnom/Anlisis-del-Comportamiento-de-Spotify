@@ -53,10 +53,33 @@
 
 			<figure>
 				<div class="ZoomChart-container">
-					<script src="C:\Users\oltie\OneDrive\Escritorio\DiTella\5to_Semestre_23\VDATA\VD_FINAL\VD_FINAL\Zoomchart\ZoomChart.js"></script>
+					<section id = "ZoomChart">
+						<svg width="200" height="200"></svg>
+						<script src="./Zoomchart/script.js"></script>
+					</section>
 				</div>
 			</figure>
 		</section>
+		 
+		<div>
+		<section id = "explicacion"><p class = parrafo>parrafo explicando</p>
+			<section id = "ZoomChart">
+				<svg width="200" height="200"></svg>
+				<script src="./Zoomchart/script.js"></script>
+			</section>
+			<section id = "RadarChart">
+				<script type="module">
+
+					import define from "./Radarchart/index.js";
+					import {Runtime, Library, Inspector} from "./Radarchart/runtime.js";
+					
+					const runtime = new Runtime();
+					const main_ = runtime.module(define, Inspector.into(document.body));
+					
+					</script>
+			</section>
+		</section>
+		</div>
 
 		<section id="outro"></section>
 	</main>
@@ -103,7 +126,7 @@
 			});
 
 			// update graphic based on step
-			figure.select(".ZoomChart-cortainer").text(response.index + 1);
+			figure.select("p").text(response.index + 1);
 		}
 
 		function init() {
