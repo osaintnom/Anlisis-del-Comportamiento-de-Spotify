@@ -5,94 +5,10 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>VD_FINAL_Sentimientos</title>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<meta name="description" content="Trabajo practico Final" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="./style.css" />
-	<style>
-		    body {
-      background-color: #000000;
-    }
-		#scrolly {
-			position: relative;
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			background-color: #000000;
-			padding: 2rem;
-		}
-
-		#scrolly>* {
-			-webkit-box-flex: 1;
-			-ms-flex: 1;
-			flex: 1;
-		}
-
-		article {
-			position: relative;
-			padding: 0 1rem;
-			max-width: 25rem;
-		}
-
-		figure {
-			position: -webkit-sticky;
-			position: sticky;
-			width: 100%;
-			margin: 0;
-			-webkit-transform: translate3d(0, 0, 0);
-			-moz-transform: translate3d(0, 0, 0);
-			transform: translate3d(0, 0, 0);
-			background-color: #adccd4;
-			z-index: 0;
-		}
-
-		figure p {
-			text-align: center;
-			padding: 1rem;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			-moz-transform: translate(-50%, -50%);
-			-webkit-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-			font-size: 8rem;
-			font-weight: 900;
-			color: #fff;
-		}
-
-		
-		.step {
-			margin: 0 auto 2rem auto;
-			background-color: #3b3b3b;
-			color: #fff;
-		}
-
-		.step:last-child {
-			margin-bottom: 0;
-		}
-
-		.step.is-active {
-			background-color: rgb(154, 154, 154);
-			color: #3b3b3b;
-		}
-
-		.step p {
-			text-align: center;
-			padding: 1rem;
-			font-size: 1.5rem;
-		}
-		.intro__hed {
-			font-family: sans-serif;
-			color: white;
-		}
-
-		nav {
-    		background-color: black; /* Add this line to change the background color to black */
-  		}
-		.nav__examples p {
-    		color: white; /* Add this line to change the text color to white */
-  		}
-		
-	</style>
 </head>
 
 <body>
@@ -136,7 +52,9 @@
 			</article>
 
 			<figure>
-				<p>0</p>
+				<div class="ZoomChart-container">
+					<script src="C:\Users\oltie\OneDrive\Escritorio\DiTella\5to_Semestre_23\VDATA\VD_FINAL\VD_FINAL\Zoomchart\ZoomChart.js"></script>
+				</div>
 			</figure>
 		</section>
 
@@ -185,7 +103,7 @@
 			});
 
 			// update graphic based on step
-			figure.select("p").text(response.index + 1);
+			figure.select(".ZoomChart-cortainer").text(response.index + 1);
 		}
 
 		function init() {
