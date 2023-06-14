@@ -37,15 +37,15 @@ function _3(d3,RadarChart)
     ],
     [
       // Oli
-      { axis: "Triste", value: 0.27 },
-      { axis: "Promedio", value: 0.16 },
-      { axis: "Feliz", value: 0.35 },
+      { axis: "Triste", value: 0.4 },
+      { axis: "Promedio", value: 0.46 },
+      { axis: "Feliz", value: 0.13 },
     ],
     [
       // Valen
-      { axis: "Triste", value: 0.26 },
-      { axis: "Promedio", value: 0.1 },
-      { axis: "Feliz", value: 0.3 },
+      { axis: "Triste", value: 0.5 },
+      { axis: "Promedio", value: 0.26 },
+      { axis: "Feliz", value: 0.23 },
     ]
   ];
   //////////////////////////////////////////////////////////////
@@ -401,6 +401,10 @@ axisGrid
   //////// Append invisible circles for tooltip ///////////
   /////////////////////////////////////////////////////////
 
+  function formatPercentage(value) {
+    return (value * 100).toFixed(0) + "%";
+  }
+
   //Wrapper for the invisible circles on top
   var blobCircleWrapper = g
     .selectAll(".radarCircleWrapper")
@@ -434,7 +438,7 @@ axisGrid
       tooltip
         .attr("x", newX)
         .attr("y", newY)
-        .text(Format(d.value))
+        .text(formatPercentage(d.value))
         .transition()
         .duration(200)
         .style("opacity", 1);
