@@ -73,13 +73,13 @@ def main():
     client_credentials_manager = SpotifyClientCredentials(client_id=cid, client_secret=secret)
     sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
-    df = convert_json_into_df(results=sp.playlist('42g5kM4VWLmIeoLfmGzSUq'), sp=sp)
-    df.to_csv("./analisis_datos/gerar.csv", index=False)    
+    df = convert_json_into_df(results=sp.playlist('3QL4cZDs4H4xWVzVgNslJE'), sp=sp)
+    df.to_csv("./valen.csv", index=False)    
 
 if __name__ == '__main__':
     main()
 
 #https://open.spotify.com/playlist/7cLua2vBmBZsQQYoPXNduD?si=525a256de69a4563
 # oli = https://open.spotify.com/playlist/2yCABoqVYJ36dwvPSyry18?si=2651cbbd4ebe4592
-# valen = 
+# valen = https://open.spotify.com/playlist/3QL4cZDs4H4xWVzVgNslJE?si=363fc303dc5241fa
 # gerar = https://open.spotify.com/playlist/42g5kM4VWLmIeoLfmGzSUq?si=57df4f58d7ea46f4
