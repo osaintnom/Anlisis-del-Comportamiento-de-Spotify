@@ -48,7 +48,20 @@
                 "children": [
                     {
                         "name": "tempo <= 120",
-                        "children": []
+                        "children": [{
+                            "name": "loudness <= -10",
+                            "children": [                                
+                                {"name": "AgglomerativeCluster", "size": 3938},
+                                {"name": "CommunityStructure", "size": 3812},
+                                {"name": "HierarchicalCluster", "size": 6714},
+                                {"name": "MergeEdge", "size": 743}]
+                        },
+                        {
+                            "name": "loudness > -10",
+                            "children": [
+                                {"name": "HierarchicalCluster", "size": 6714},
+                                {"name": "MergeEdge", "size": 743}]
+                        }]
                     },
                     {
                         "name": "tempo > 120",
@@ -90,11 +103,17 @@
                         "children": [
                             {
                                 "name": "loudness <= -10",
-                                "children": []
+                                "children": [                                
+                                    {"name": "AgglomerativeCluster", "size": 3938},
+                                    {"name": "CommunityStructure", "size": 3812},
+                                    {"name": "HierarchicalCluster", "size": 6714},
+                                    {"name": "MergeEdge", "size": 743}]
                             },
                             {
                                 "name": "loudness > -10",
-                                "children": []
+                                "children": [
+                                    {"name": "HierarchicalCluster", "size": 6714},
+                                    {"name": "MergeEdge", "size": 743}]
                             }
                         ]
                     }

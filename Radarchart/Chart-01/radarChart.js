@@ -269,4 +269,56 @@ function RadarChart(id, data, options) {
 	  });
 	}//wrap	
 	
-}//RadarChart
+}
+
+
+
+//RadarChart
+
+/* Radar chart design created by Nadieh Bremer - VisualCinnamon.com */
+      
+function _3(d3,RadarChart)
+{
+  //////////////////////////////////////////////////////////////
+  //////////////////////// Set-Up //////////////////////////////
+  //////////////////////////////////////////////////////////////
+
+  var margin = { top: 100, right: 100, bottom: 100, left: 100 },
+    width = Math.min(700, window.innerWidth - 10) - margin.left - margin.right,
+    height = Math.min(
+      width,
+      window.innerHeight - margin.top - margin.bottom - 20
+    );
+
+  //////////////////////////////////////////////////////////////
+  ////////////////////////// Data //////////////////////////////
+  //////////////////////////////////////////////////////////////
+
+
+  var data = [
+    [
+      // Gerar
+      { axis: "Triste", value: 0.33 },
+      { axis: "Promedio", value: 0.53 },
+      { axis: "Feliz", value: 0.13 },
+    ],
+    [
+      // Oli
+      { axis: "Triste", value: 0.27 },
+      { axis: "Promedio", value: 0.16 },
+      { axis: "Feliz", value: 0.35 },
+    ],
+    [
+      // Valen
+      { axis: "Triste", value: 0.26 },
+      { axis: "Promedio", value: 0.1 },
+      { axis: "Feliz", value: 0.3 },
+    ]
+  ];
+}
+
+main.variable(observer()).define(["d3","RadarChart"], _3);
+main.variable(observer("RadarChart")).define("RadarChart", ["d3","DOM"], _RadarChart);
+main.variable(observer("d3")).define("d3", ["require"], _d3);
+
+RadarChart(".radarChart", data, radarChartOptions);

@@ -48,6 +48,8 @@ d3.json("../analisis_datos/tree.json", function(error, root) {
   zoomTo([root.x, root.y, root.r * 2 + margin]);
 
   function zoom(d) {
+    console.log('d', d);
+    console.log('focus', focus);
     var focus0 = focus; focus = d;
 
     var transition = d3.transition()
