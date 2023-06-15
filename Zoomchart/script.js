@@ -6,14 +6,14 @@ var svg = d3.select("svg"),
 
 var color = d3.scaleLinear()
     .domain([-1, 5])
-    .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
+    .range(["hsl(192, 77%, 57%)", "hsl(220,50%,20%)"])
     .interpolate(d3.interpolateHcl);
 
 var pack = d3.pack()
     .size([diameter - margin, diameter - margin])
     .padding(2);
 
-d3.json("./analisis_datos/tree.json", function(error, root) {
+d3.json("../analisis_datos/tree.json", function(error, root) {
   if (error) throw error;
 
   root = d3.hierarchy(root)
@@ -42,7 +42,7 @@ d3.json("./analisis_datos/tree.json", function(error, root) {
   var node = g.selectAll("circle,text");
 
   svg
-      .style("background", color(-1))
+      // .style("background", color(-1))
       .on("click", function() { zoom(root); });
 
   zoomTo([root.x, root.y, root.r * 2 + margin]);
@@ -57,11 +57,12 @@ d3.json("./analisis_datos/tree.json", function(error, root) {
           return function(t) { zoomTo(i(t)); };
         });
 
-    transition.selectAll("text")
-      .filter(function(d) { return d.parent === focus || this.style.display === "inline"; })
-        .style("fill-opacity", function(d) { return d.parent === focus ? 1 : 0; })
-        .on("start", function(d) { if (d.parent === focus) this.style.display = "inline"; })
-        .on("end", function(d) { if (d.parent !== focus) this.style.display = "none"; });
+      transition.selectAll("text")
+      .filter(function(d) { return !d.parent || d.parent === focus || this.style.display === "inline"; })
+      .style("fill-opacity", function(d) { return !d.parent || d.parent === focus ? 1 : 0; })
+      .on("start", function(d) { if (!d.parent || d.parent === focus) this.style.display = "inline"; })
+      .on("end", function(d) { if (!d.parent || d.parent !== focus) this.style.display = "none"; });
+      
   }
 
   function zoomTo(v) {
@@ -70,3 +71,9 @@ d3.json("./analisis_datos/tree.json", function(error, root) {
     circle.attr("r", function(d) { return d.r * k; });
   }
 });
+
+// .append(svg)
+
+// console.log('svg', svg)
+
+d3.select('#chart').append(() => chart)

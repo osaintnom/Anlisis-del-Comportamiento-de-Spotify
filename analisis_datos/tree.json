@@ -1,0 +1,106 @@
+{
+    "name": "all",
+    "children": [
+    {
+        "name": "valence <= 0.33",
+        "children": [
+            {
+                "name": "mode == 0",
+                "children": []
+            },
+            {
+                "name": "mode == 1",
+                "children": [
+                    {
+                        "name": "tempo <= 120",
+                        "children": []
+                    },
+                    {
+                        "name": "tempo > 120",
+                        "children": [
+                            {
+                                "name": "loudness <= -10",
+                                "children": []
+                            },
+                            {
+                                "name": "loudness > -10",
+                                "children": [         
+                                {"name": "AgglomerativeCluster", "size": 3938},
+                                {"name": "CommunityStructure", "size": 3812},
+                                {"name": "HierarchicalCluster", "size": 6714},
+                                {"name": "MergeEdge", "size": 743}]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "valence <= 0.66",
+        "children": [
+            {
+                "name": "mode == 0",
+                "children": []
+            },
+            {
+                "name": "mode == 1",
+                "children": [
+                    {
+                        "name": "tempo <= 120",
+                        "children": []
+                    },
+                    {
+                        "name": "tempo > 120",
+                        "children": [
+                            {
+                                "name": "loudness <= -10",
+                                "children": []
+                            },
+                            {
+                                "name": "loudness > -10",
+                                "children": [         
+                                {"name": "AgglomerativeCluster", "size": 3938},
+                                {"name": "CommunityStructure", "size": 3812},
+                                {"name": "HierarchicalCluster", "size": 6714},
+                                {"name": "MergeEdge", "size": 743}]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "valence <= 1",
+        "children": [
+            {
+                "name": "mode == 0",
+                "children": []
+            },
+            {
+                "name": "mode == 1",
+                "children": [
+                    {
+                        "name": "tempo <= 120",
+                        "children": []
+                    },
+                    {
+                        "name": "tempo > 120",
+                        "children": [
+                            {
+                                "name": "loudness <= -10",
+                                "children": []
+                            },
+                            {
+                                "name": "loudness > -10",
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+    ]
+    }

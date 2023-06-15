@@ -1,33 +1,140 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<style>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>VD_FINAL_Sentimientos</title>
+	<meta name="description" content="Trabajo practico Final">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./style.css">
 
-.node {
-  cursor: pointer;
-}
 
-.node:hover {
-  stroke: #000;
-  stroke-width: 1.5px;
-}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+	<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.contentWindow.js"></script>
+	<script src="./scrollama.min.js"></script>
+</head>
+<body>
+	<a href="https://github.com/osaintnom/VD_FINAL_Sentimientos" target="_blank" class="github-corner" aria-label="View source on GitHub">
+		<svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151313; color:#00abce; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+			<path d="https://github.com/osaintnom/VD_FINAL_Sentimientos"></path>
+			<path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+			<path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+		</svg>
+	</a>
+	<main>
+		<nav>
+			<a href="https://github.com/osaintnom/VD_FINAL_Sentimientos" style="color: rgb(65, 198, 228);">Sentimientos</a>
+			<div class="nav__examples">
+				<p>De Diego, Del Toro y Saint-Nom</p>
+			</div>
+		</nav>
+		<section id="intro" style="max-width: 55rem;">
+			<h1 class="intro__hed">La emoción musical y sus aspectos</h1>
+			<!-- <p class = "subtitulo"> en este trabajo ... <p> -->
+			<p class="intro__dek" style="margin-top: 100px; margin-bottom: -150px;">
+				En este artículo, se lleva a cabo un estudio detallado sobre la valencia de las canciones disponibles en la plataforma de música en streaming Spotify. La valencia es una medida que refleja la positividad o negatividad emocional de una canción. El análisis se divide en tres categorías principales de valencia: baja valencia (0 a 0.33), valencia moderada (0.33 a 0.66) y alta valencia (0.66 a 1). Cada categoría representa un espectro emocional distinto y nos permite examinar las particularidades musicales que definen cada rango.
+			</p>
+		</section>
+		<section id="scrolly">
+			<article>
+				<div class="step" data-step="1">
+					<p style="padding-top: 300px;"> 0 ≤ Valencia ≤ 0,33 </p>
+				</div>
+				<div class="step" data-step="2">
+					<p style="padding-top: 300px;"> 0,33 < Valencia ≤ 0,66 </p>
+				</div>
+				<div class="step" data-step="3">
+					<p style="padding-top: 300px;"> 0,66 < Valencia ≤ 1</p>
+				</div>
+			</article>
+			<figure id="zoomChartContainer"></figure>
+			<script src="https://d3js.org/d3.v4.min.js"></script>
+			<script src="script.js"></script>
+				<div id="zoomChartContainer">
+					<div id="Zoomchart"></div>
+					<svg id="zoomChartSvg" width="200" height="200"></svg><script src="./Zoomchart/script.js"></script>
+				</div>
+			
+		</section>
+		<div class="subody">
+			<section id="explicacion">
+				<p class="parrafo">parrafo explicando</p>
+				<section id="RadarChart">
+					<script type="module">
+						import define from "./Radarchart/index.js";
+						import { Runtime, Library, Inspector } from "./Radarchart/runtime.js";
+						const runtime = new Runtime();
+						const main_ = runtime.module(define, Inspector.into(document.body));
+					</script>
+				</section>
+			</section>
+		</div>
+		<section id="outro"></section>
+	
+	<script>
+		// using d3 for convenience
+		var main = d3.select("main");
+		var scrolly = main.select("#scrolly");
+		var figure = scrolly.select("figure");
+		var article = scrolly.select("article");
+		var step = article.selectAll(".step");
 
-.node--leaf {
-  fill: white;
-}
+		// initialize the scrollama
+		var scroller = scrollama();
 
-.label {
-  font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-anchor: middle;
-  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
-}
+		// generic window resize listener event
+		function handleResize() {
+			// 1. update height of step elements
+			var stepH = Math.floor(window.innerHeight *2.5);
+			step.style("height", stepH + "px");
 
-.label,
-.node--root,
-.node--leaf {
-  pointer-events: none;
-}
+			var figureHeight = window.innerHeight / 1.11335;
+			var figureMarginTop = (window.innerHeight - figureHeight) / 2;
 
-</style>
-<svg width="960" height="960"></svg>
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="ZoomChart.js"></script>
+			figure
+				.style("height", figureHeight + "px")
+				.style("top", figureMarginTop + "px");
+
+			// 3. tell scrollama to update new element dimensions
+			scroller.resize();
+		}
+
+		// scrollama event handlers
+		function handleStepEnter(response) {
+			console.log(response);
+			// response = { element, direction, index }
+
+			// add color to current step only
+			step.classed("is-active", function (d, i) {
+				return i === response.index;
+			});
+
+			// update graphic based on step
+			figure.select("p").text("grafico " + (response.index + 1));
+		}
+
+		function init() {
+
+			// 1. force a resize on load to ensure proper dimensions are sent to scrollama
+			handleResize();
+
+			// 2. setup the scroller passing options
+			// 		this will also initialize trigger observations
+			// 3. bind scrollama event handlers (this can be chained like below)
+			scroller
+				.setup({
+					step: "#scrolly article .step",
+					offset: 0.33,
+					debug: false
+				})
+				.onStepEnter(handleStepEnter);
+		}
+
+		// kick things off
+		init();
+	</script>
+</body>
+
+</html>
