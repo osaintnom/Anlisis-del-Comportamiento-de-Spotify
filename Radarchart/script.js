@@ -396,14 +396,11 @@ axisGrid
       return "#737373";
     })
     .style("fill-opacity", 0.8);
+    
 
   /////////////////////////////////////////////////////////
   //////// Append invisible circles for tooltip ///////////
   /////////////////////////////////////////////////////////
-
-  function formatPercentage(value) {
-    return (value * 100).toFixed(0) + "%";
-  }
 
   //Wrapper for the invisible circles on top
   var blobCircleWrapper = g
@@ -432,13 +429,15 @@ axisGrid
     .style("fill", "none")
     .style("pointer-events", "all")
     .on("mouseover", function(d, i) {
+      console.log(d.value)
+      
       var newX = parseFloat(d3.select(this).attr("cx")) - 10;
       var newY = parseFloat(d3.select(this).attr("cy")) - 10;
 
       tooltip
         .attr("x", newX)
         .attr("y", newY)
-        .text(formatPercentage(d.value))
+        .text(d3.format(".0%")(d.value))
         .transition()
         .duration(200)
         .style("opacity", 1);
@@ -466,10 +465,10 @@ require("d3@5")
 
 export default function define(runtime, observer) {
   const main = runtime.module();
-  main.variable(observer()).define(["md"], _1);
+  // main.variable(observer()).define(["md"], _1);
   // main.variable(observer()).define(["md"], _2);
   main.variable(observer()).define(["d3","RadarChart"], _3);
   main.variable(observer("RadarChart")).define("RadarChart", ["d3","DOM"], _RadarChart);
-  // main.variable(observer("d3")).define("d3", ["require"], _d3);
+  main.variable(observer("d3")).define("d3", ["require"], _d3);
   return main;
 }
