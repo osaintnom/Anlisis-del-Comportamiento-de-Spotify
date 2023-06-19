@@ -18,6 +18,14 @@ section{
     align-items: center;
 }
 
+p {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 20px; /* Add desired top padding */
+    padding-bottom: 20px; /* Add desired bottom padding */
+  }
+
 section:nth-child(1){
     color: #fff;
 }
@@ -32,8 +40,20 @@ section:nth-child(3){
 }
 
 section:nth-child(4){
+    color: #fff;
+}
+
+section:nth-child(5){
+    color: #fff;
+}
+
+section:nth-child(6){
     color: #1D212B;
     background: #fff;
+}
+
+section:nth-child(6){
+    color: #fff;
 }
 
 section .container{
@@ -54,11 +74,23 @@ section .cards{
     display: flex;
 }
 
-section .cards .text-card{
-    background: #2696E9;
+section .cards .text-card:nth-child(1) {
+    background: #E6662C;
     margin: 20px;
     padding: 20px;
-}
+  }
+  
+  section .cards .text-card:nth-child(2) {
+    background: #9CC545;
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  section .cards .text-card:nth-child(3) {
+    background: #4984BE;
+    margin: 20px;
+    padding: 20px;
+  }
 
 section .cards .text-card h3{
     font-size: 30px;
