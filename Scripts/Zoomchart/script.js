@@ -13,7 +13,7 @@ var pack = d3.pack()
     .size([diameter - margin, diameter - margin])
     .padding(2);
 
-d3.json("../analisis_datos/tree.json", function(error, root) {
+d3.json("../../analisis_datos/tree.json", function(error, root) {
   if (error) throw error;
 
   root = d3.hierarchy(root)
@@ -23,6 +23,10 @@ d3.json("../analisis_datos/tree.json", function(error, root) {
   var focus = root,
       nodes = pack(root).descendants(),
       view;
+
+      // Dispatch a custom event to notify other scripts about the availability of nodes
+  var event = new CustomEvent('nodesReady', { detail: { nodes: nodes } });
+  window.dispatchEvent(event);
 
   var circle = g.selectAll("circle")
     .data(nodes)
@@ -50,27 +54,43 @@ d3.json("../analisis_datos/tree.json", function(error, root) {
   function zoom(d) {
     console.log('d', d);
     console.log('focus', focus);
-    var focus0 = focus; focus = d;
-
+    var focus0 = focus;
+    focus = d;
+  
     var transition = d3.transition()
-        .duration(d3.event.altKey ? 7500 : 750)
-        .tween("zoom", function(d) {
-          var i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2 + margin]);
-          return function(t) { zoomTo(i(t)); };
-        });
-
-      transition.selectAll("text")
-      .filter(function(d) { return !d.parent || d.parent === focus || this.style.display === "inline"; })
-      .style("fill-opacity", function(d) { return !d.parent || d.parent === focus ? 1 : 0; })
-      .on("start", function(d) { if (!d.parent || d.parent === focus) this.style.display = "inline"; })
-      .on("end", function(d) { if (!d.parent || d.parent !== focus) this.style.display = "none"; });
-      
+      .duration(d3.event.altKey ? 7500 : 750)
+      .tween("zoom", function(d) {
+        var i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2 + margin]);
+        return function(t) {
+          zoomTo(i(t));
+        };
+      });
+  
+    transition.selectAll("text")
+      .filter(function(d) {
+        return !d.parent || d.parent === focus || this.style.display === "inline";
+      })
+      .style("fill-opacity", function(d) {
+        return !d.parent || d.parent === focus ? 1 : 0;
+      })
+      .each(function(d) {
+        if (!d.parent || d.parent === focus) {
+          this.style.display = "inline";
+        } else {
+          this.style.display = "none";
+        }
+      });
   }
-
+  
   function zoomTo(v) {
-    var k = diameter / v[2]; view = v;
-    node.attr("transform", function(d) { return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")"; });
-    circle.attr("r", function(d) { return d.r * k; });
+    var k = diameter / v[2];
+    view = v;
+    node.attr("transform", function(d) {
+      return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")";
+    });
+    circle.attr("r", function(d) {
+      return d.r * k;
+    });
   }
 });
 

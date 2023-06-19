@@ -51,8 +51,8 @@ figure p {
 }
 
 .step.is-active {
-  background-color: rgb(154, 154, 154);
-  color: #3b3b3b;
+  background-color: rgb(101, 173, 214);
+  color: rgb(255, 255, 255);
 }
 
 .step p {
@@ -253,6 +253,15 @@ nav {
 .node--root,
 .node--leaf {
   pointer-events: none;
+}
+span.is-visible {
+  opacity: 1;
+}
+span {
+  opacity: 0;
+  -webkit-transition: opacity 500ms ease-in-out;
+  -o-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out
 }
 /* 
 svg{
