@@ -97,7 +97,7 @@ function RadarChart(id, data, options) {
 	   .attr("x", 4)
 	   .attr("y", function(d){return -d*radius/cfg.levels;})
 	   .attr("dy", "0.4em")
-	   .style("font-size", "10px")
+	   .style("font-size", "13px")
 	   .attr("fill", "#737373")
 	   .text(function(d,i) { return Format(maxValue * d/cfg.levels); });
 
@@ -124,7 +124,7 @@ function RadarChart(id, data, options) {
 	//Append the labels at each axis
 	axis.append("text")
 		.attr("class", "legend")
-		.style("font-size", "11px")
+		.style("font-size", "16px")
 		.attr("text-anchor", "middle")
 		.attr("dy", "0.35em")
 		.attr("x", function(d, i){ return rScale(maxValue * cfg.labelFactor) * Math.cos(angleSlice*i - Math.PI/2); })
@@ -287,22 +287,22 @@ function RadarChart(id, data, options) {
 
 	var data1 = [
 	[
-	// Gerar
-	{ axis: "Triste", value: 0.33 },
-	{ axis: "Neutro", value: 0.53 },
-	{ axis: "Feliz", value: 0.13 },
-	],
-	[
-	// Oli
-	{ axis: "Triste", value: 0.4 },
-	{ axis: "Neutro", value: 0.46 },
-	{ axis: "Feliz", value: 0.13 },
-	],
-	[
-	// Valen
-	{ axis: "Triste", value: 0.5 },
+	// valen
+	{ axis: "Triste", value: 0.51 },
 	{ axis: "Neutro", value: 0.26 },
 	{ axis: "Feliz", value: 0.23 },
+	],
+	[
+	// gerar
+	{ axis: "Triste", value: 0.31},
+	{ axis: "Neutro", value: 0.55 },
+	{ axis: "Feliz", value: 0.14 },
+	],
+	[
+	// oli
+	{ axis: "Triste", value: 0.24 },
+	{ axis: "Neutro", value: 0.31 },
+	{ axis: "Feliz", value: 0.45 },
 	]
 ];
 	////////////////////////////////////////////////////////////// 

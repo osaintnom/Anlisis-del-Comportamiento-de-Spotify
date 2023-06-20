@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    font-size: 20px;
 }
 
 body{
@@ -37,6 +38,9 @@ section{
 
 .card h3 {
     margin-top: 10px;
+}
+.text-card {
+    margin-top: 50px;
 }
 
 p {
@@ -130,6 +134,7 @@ section .cards .text-card:nth-child(3) {
     padding: 20px;
 }
 
+
 section .cards .text-card h3{
     font-size: 30px;
     text-align: center;
@@ -164,7 +169,7 @@ t{
     color: #E6662C;
 }
 n{
-    color: #9CC545;
+    color: #81b71a;
 }
 f{
     color:#4984BE;
