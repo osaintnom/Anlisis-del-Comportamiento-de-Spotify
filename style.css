@@ -24,19 +24,12 @@ section{
     padding: 20px;
 }
 
-.sticky-image {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-  }
-
 .cards img {
-    scroll-margin-top: 150px;
     max-width: 90%; /* Adjust the value as needed */
     display: block;
     margin: 0 auto;
     padding-top: 60px;
-  }
+}
 
 .card {
     text-align: center;
@@ -76,11 +69,19 @@ section:nth-child(5){
 }
 
 section:nth-child(6){
+    color: #fff;
+}
+
+section:nth-child(7){
+    color: #fff;
+}
+
+section:nth-child(8){
     color: #1D212B;
     background: #fff;
 }
 
-section:nth-child(7){
+section:nth-child(9){
     color: #ffff;
 }
 
