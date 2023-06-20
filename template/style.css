@@ -18,6 +18,13 @@ section{
     align-items: center;
 }
 
+.cards img {
+    max-width: 50%; /* Adjust the value as needed */
+    display: block;
+    margin: 0 auto;
+    padding-top: 60px;
+  }
+
 p {
     text-align: center;
     width: 50%;
@@ -53,7 +60,7 @@ section:nth-child(6){
 }
 
 section:nth-child(6){
-    color: #fff;
+    color: #ffff;
 }
 
 section .container{
