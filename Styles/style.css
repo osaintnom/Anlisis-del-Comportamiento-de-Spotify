@@ -18,6 +18,13 @@ section{
     align-items: center;
 }
 
+.cards img {
+    max-width: 50%; /* Adjust the value as needed */
+    display: block;
+    margin: 0 auto;
+    padding-top: 60px;
+  }
+
 p {
     text-align: center;
     width: 50%;
@@ -53,7 +60,7 @@ section:nth-child(6){
 }
 
 section:nth-child(7){
-    color: #ffffff;
+    color: #ffff;
 }
 
 section .container{
@@ -75,7 +82,7 @@ section .cards{
 }
 
 section .cards .text-card:nth-child(1) {
-    background: #4984BE;
+    background: #E6662C;
     margin: 20px;
     padding: 20px;
   }
@@ -87,7 +94,7 @@ section .cards .text-card:nth-child(1) {
   }
   
   section .cards .text-card:nth-child(3) {
-    background: #E6662C;
+    background: #4984BE;
     margin: 20px;
     padding: 20px;
   }
@@ -122,7 +129,6 @@ section .cards .text-card h3{
 }
 
 
-
 t{
     color: #4984BE;
 }
@@ -144,5 +150,3 @@ f{
     color: #fff;
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
-
-

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> VD_FINAL_Sentimientos </title>
-        <link rel="stylesheet" href="./Styles/style.css">
+        <link rel="stylesheet" href="./style.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
     </head>
     <body>
@@ -20,16 +20,40 @@
                 <div class="cards">
                     <div class="text-card">
                         <h3>Tristes</h3>
-                        <p> Esta categoría de canciones representaría las canciones con valencia de 0 a 0,33 </p>
+                        <p> Esta categoría de canciones representa las canciones con valencia de 0 a 0,33 </p>
                     </div>
                     <div class="text-card">
                         <h3>Neutras</h3>
-                        <p> Esta categoría de canciones representaría las canciones con valencia de 0,33 a 0,66 </p>
+                        <p> Esta categoría de canciones representa las canciones con valencia de 0,33 a 0,66 </p>
                     </div>
                     <div class="text-card">
                         <h3>Felices</h3>
-                        <p> Esta categoría de canciones representaría las canciones con valencia de 0,66 a 1 </p>
+                        <p> Esta categoría de canciones representa las canciones con valencia de 0,66 a 1 </p>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container reveal">
+                <h2>Canciones tristes</h2>
+                <div class="cards">
+                    <img src="img/grafico1.png" alt="Mi imagen">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container reveal">
+                <h2>Canciones neutras</h2>
+                <div class="cards">
+                    <img src="img/grafico2.png" alt="Mi imagen">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container reveal">
+                <h2>Canciones felices</h2>
+                <div class="cards">
+                    <img src="img/grafico3.png" alt="Mi imagen">
                 </div>
             </div>
         </section>
@@ -51,6 +75,15 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="chart"></div>		
+                <div class="radarChart"></div>
+                <script src="../Scripts/Radarchartv2/script.js"></script>	
+                <script>
+                    RadarChart(".chart", data1, radarChartOptions);
+                </script></div>
+            
+        </div>
         </section>
         <section>
             <div class="container reveal">
@@ -70,69 +103,6 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <section>
-            <div class="container reveal">
-                <h2>Title</h2>
-                <div class="cards">
-                    <div class="text-card">
-                        <h3>title</h3>
-                        <p> parrafooooooo </p>
-                    </div>
-                    <div class="text-card">
-                        <h3>title</h3>
-                        <p> parrafooooooo </p>
-                    </div>
-                    <div class="text-card">
-                        <h3>title</h3>
-                        <p> parrafooooooo </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="container reveal">
-                <h2>Title</h2>
-                <div class="cards">
-                    <div class="text-card">
-                        <h3>title</h3>
-                        <p> parrafooooooo </p>
-                    </div>
-                    <div class="text-card">
-                        <h3>title</h3>
-                        <p> parrafooooooo </p>
-                    </div>
-                    <div class="text-card">
-                        <h3>title</h3>
-                        <p> parrafooooooo </p>
-                    </div>
-                </div>
-                <div class="chart"></div>		
-                    <div class="radarChart"></div>
-                    <script src="./Scripts/Radarchartv2/script.js"></script>	
-                    <script>
-                        RadarChart(".chart", data1, radarChartOptions);
-                    </script></div>
-                
-            </div>
-        </section>
-        <section>
-            <div class="container reveal">
-                <h2>Title</h2>
-                <div class="cards">
-                    <div class="text-card">
-                        <h3>title</h3>
-                        <p> parrafooooooo </p>
-                    </div>
-                    <div class="text-card">
-                        <h3>title</h3>
-                        <p> parrafooooooo </p>
-                    </div>
-                    <div class="text-card">
-                        <h3>title</h3>
-                        <p> parrafooooooo </p>
-                    </div>
-                </div>
         </section>
 
         <script type="text/javascript">
