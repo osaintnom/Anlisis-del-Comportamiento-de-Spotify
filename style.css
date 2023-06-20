@@ -81,6 +81,15 @@ section .cards{
     display: flex;
 }
 
+/* section .cards:nth-child(1){
+    display: flex;
+}
+*/
+section .cards:nth-child(2){
+    display: flex;
+    margin-left: 25px;
+}
+
 section .cards .text-card:nth-child(1) {
     background: #E6662C;
     margin: 20px;
@@ -130,13 +139,13 @@ section .cards .text-card h3{
 
 
 t{
-    color: #4984BE;
+    color: #E6662C;
 }
 n{
     color: #9CC545;
 }
 f{
-    color:#E6662C;
+    color:#4984BE;
 }
 
 #intro{

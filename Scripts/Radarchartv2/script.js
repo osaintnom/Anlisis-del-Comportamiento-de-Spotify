@@ -310,7 +310,7 @@ function RadarChart(id, data, options) {
 	////////////////////////////////////////////////////////////// 
 
 	var color = d3.scale.ordinal()
-		.range(["#EDC951","#CC333F","#00A0B0"]);
+		.range(["#E6662C","#9CC545","#4984BE"]);
 		
 	var radarChartOptions = {
 		w: width,
