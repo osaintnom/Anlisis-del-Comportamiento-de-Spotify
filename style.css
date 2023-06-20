@@ -18,12 +18,33 @@ section{
     align-items: center;
 }
 
+.section .cards .card .text-card {
+    background-color: #E6662C;
+    margin: 20px;
+    padding: 20px;
+}
+
+.sticky-image {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
 .cards img {
-    max-width: 50%; /* Adjust the value as needed */
+    scroll-margin-top: 150px;
+    max-width: 90%; /* Adjust the value as needed */
     display: block;
     margin: 0 auto;
     padding-top: 60px;
   }
+
+.card {
+    text-align: center;
+}
+
+.card h3 {
+    margin-top: 10px;
+}
 
 p {
     text-align: center;
@@ -94,19 +115,19 @@ section .cards .text-card:nth-child(1) {
     background: #E6662C;
     margin: 20px;
     padding: 20px;
-  }
+}
   
-  section .cards .text-card:nth-child(2) {
+section .cards .text-card:nth-child(2) {
     background: #9CC545;
     margin: 20px;
     padding: 20px;
-  }
+}
   
-  section .cards .text-card:nth-child(3) {
+section .cards .text-card:nth-child(3) {
     background: #4984BE;
     margin: 20px;
     padding: 20px;
-  }
+}
 
 section .cards .text-card h3{
     font-size: 30px;
