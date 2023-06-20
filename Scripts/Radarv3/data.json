@@ -1,0 +1,17 @@
+[
+    [
+      {"area": "Triste ", "value": 80},
+      {"area": "Feliz", "value": 40},
+      {"area": "Neutral ", "value": 55}
+  	],
+    [
+      {"area": "Triste ", "value": 50},
+      {"area": "Feliz", "value": 20},
+      {"area": "Neutral ", "value": 75}
+    ],
+    [
+      {"area": "Triste ", "value": 40},
+      {"area": "Feliz", "value": 60},
+      {"area": "Neutral ", "value": 35}
+    ]  
+  ]

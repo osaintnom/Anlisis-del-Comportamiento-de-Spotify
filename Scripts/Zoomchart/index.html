@@ -2,36 +2,44 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <style>
-    .node {
-      cursor: pointer;
-    }
-
-    .node:hover {
-      stroke: #000;
-      stroke-width: 1.5px;
-    }
-
-    .node--leaf {
-      fill: white;
-    }
-
-    .label {
-      font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
-      text-anchor: middle;
-      text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
-    }
-
-    .label,
-    .node--root,
-    .node--leaf {
-      pointer-events: none;
-    }
-  </style>
+  <title>Interactive Webpage</title>
+  <link rel="stylesheet" href="./style.css">
   <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="./Radarv3/script.js"></script>
 </head>
 <body>
-  <svg width="960" height="960"></svg>
-  <script src="script.js"></script>
+  <section class="charts" id="section-1">
+    <svg class="zoomChart" width="800" height="800"></svg>
+    <script src="script.js"></script>
+  </section>
+  <section class="charts" id="section-2">
+    <div id="chart"></div>
+    <script src="../Radarv3/script.js"></script>
+    <script>
+      var width = 300,
+          height = 300;
+
+      // Config for the Radar chart
+      var config = {
+          w: width,
+          h: height,
+          maxValue: 100,
+          levels: 5,
+          ExtraWidthX: 300
+      };
+
+      // Call function to draw the Radar chart
+      d3.json("../Radarv3/data.json", function(error, data) {
+          if (error) throw error;
+          RadarChart.draw("#chart", data, config);
+      });
+
+      var svg = d3.select('#section-2')
+        .append('svg')
+        .attr('class', 'radarChart')
+        .attr('width', width)
+        .attr('height', height);
+    </script>
+  </section>
 </body>
 </html>
