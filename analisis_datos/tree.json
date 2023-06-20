@@ -10,29 +10,18 @@
                         {
                             "name": "tempo <= 120",
                             "children": [
-                                {"name": "loudness <= -10", "children": [                                {"name": "gte", "size": 625},
-                                {"name": "iff", "size": 748},
-
-                                {"name": "mod", "size": 591},
-                                {"name": "mul", "size": 603},
-                                {"name": "neq", "size": 599},
-                                {"name": "not", "size": 386}]},
-                                {"name": "loudness > -10", "children": [                                {"name": "gte", "size": 625},
-                            
-                                {"name": "mod", "size": 591},
-                                {"name": "mul", "size": 603},
-                                {"name": "neq", "size": 599},
-                                {"name": "not", "size": 386}]}
+                                {"name": "loudness <= -10", "children": [                             
+                                {"name": "iff", "size": 748}]},
+                                {"name": "loudness > -10", "children": [                               
+                                {"name": "mod", "size": 591}]}
                             ]
                         },
                         {
                             "name": "tempo > 120",
                             "children": [
-                                {"name": "loudness <= -10", "children": []},
-                                {"name": "loudness > -10", "children": [                                {"name": "gte", "size": 625},
-                                
-                                {"name": "mul", "size": 603},
-                                {"name": "neq", "size": 599},
+                                {"name": "loudness <= -10", "children": [ 
+                                    {"name": "gte", "size": 625}]},
+                                {"name": "loudness > -10", "children": [                              
                                 {"name": "not", "size": 386}]}
                             ]
                         }
