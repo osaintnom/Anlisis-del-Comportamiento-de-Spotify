@@ -186,3 +186,12 @@ f{
     color: #fff;
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
+ #Explicacion-intro{
+    width: 63%;
+    font-size: 22px;
+    /* margin-left: 15%;
+    margin-right: 15%; */
+    margin-top: 2%;
+}
+
+/* <temp style="color:#E6662C">tempo</temp>, el <mod style="color:#9CC545">modo (escala tonal)</mod>, el <vol style="color:#D26AB0">volumen</vol> y la <ene style="color:#E22C42">energía</ene>. */
