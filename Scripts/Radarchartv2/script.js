@@ -294,15 +294,15 @@ function RadarChart(id, data, options) {
 	],
 	[
 	// gerar
-	{ axis: "Triste", value: 0.31},
-	{ axis: "Neutro", value: 0.55 },
-	{ axis: "Feliz", value: 0.14 },
+	{ axis: "Triste", value: 0.28},
+	{ axis: "Neutro", value: 0.56 },
+	{ axis: "Feliz", value: 0.16 },
 	],
 	[
 	// oli
-	{ axis: "Triste", value: 0.24 },
-	{ axis: "Neutro", value: 0.31 },
-	{ axis: "Feliz", value: 0.45 },
+	{ axis: "Triste", value: 0.30 },
+	{ axis: "Neutro", value: 0.32 },
+	{ axis: "Feliz", value: 0.38 },
 	]
 ];
 	////////////////////////////////////////////////////////////// 
