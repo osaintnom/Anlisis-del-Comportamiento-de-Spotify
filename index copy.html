@@ -6,6 +6,10 @@
         <title> VD_FINAL_Sentimientos </title>
         <link rel="stylesheet" href="./Styles/style.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/d3@7"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+        <script src="https://unpkg.com/scrollama"></script>
+        <script type="module" src="./Scripts/scroll.js"></script>
     </head>
     <body>
 
@@ -36,55 +40,72 @@
                 </div>
             </div>
         </section>
-        <section>
-            <div class="container reveal">
-                <div class="cards">
-                    <div class="card">
-                        <h3>Canciones tristes</h3>
-                        <img src="img/grafico_triste.png" alt="Mi imagen">
-                    </div>
-                    <div class="card">
-                        <h3>Canciones neutras</h3>
-                        <img src="img/grafico_neutro.png" alt="Mi imagen">
-                    </div>
-                    <div class="card">
-                        <h3>Canciones felices</h3>
-                        <img src="img/grafico_feliz.png" alt="Mi imagen">
+
+        <section id="scrolly_fotos">    
+            <!-- <figure id="fixed_container">
+                <img id="foto_0" class="foto" src="img/grafico_1.png" alt="">
+                <img id="foto_1" class="foto" src="img/grafico_1.png" alt="">
+                <img id="foto_2" class="foto" src="img/grafico_1.png" alt="">
+            </figure> -->
+
+            <article id="steps_container">
+            <section>
+                <div class="step" data-step="altura">
+                    <div class="container reveal">
+                        <div class="text-card"><p>Canciones tristes<p></div>
+                        <div class="text-card"><p>Canciones neutras</p></div>
+                        <div class="text-card"><p>Canciones felices</p></div>
+                        <div class="cards">
+                            <div class="card">
+                                <h3>Canciones tristes</h3>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h3>Canciones neutras</h3>
+                            </div>
+                            <div class="card">
+                                <h3>Canciones felices</h3>
+                                </div>
+                        <div class="text-card" style="background-color: #353C4E;">
+                            <p>Explicacion</p>
+                        </div>
                     </div>
                 </div>
-                <div class="text-card" style="background-color: #353C4E;">
-                    <p>Explicacion</p>
+            </section>
+            <section>
+                <div class="container">
+                    <h2 style="color: #E6662C;">Tempo</h2>
+                    <div class="cards">
+                        <div class="card">
+                            <h3>Canciones tristes</h3>
+                            <img src="img/triste-tempo.png" alt="Mi imagen">
+                            <div class="text-card" style="background-color: #353C4E;">
+                                <p>Explicacion</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3>Canciones neutras</h3>
+                            <img src="img/neutro-tempo.png" alt="Mi imagen">
+                            <div class="text-card" style="background-color: #353C4E;">
+                                <p>Explicacion</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3>Canciones felices</h3>
+                            <img src="img/feliz-tempo.png" alt="Mi imagen">
+                            <div class="text-card" style="background-color: #353C4E;">
+                                <p>Explicacion</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
+            </article>
+
+
         </section>
-        <section>
-            <div class="container">
-                <h2 style="color: #E6662C;">Tempo</h2>
-                <div class="cards">
-                    <div class="card">
-                        <h3>Canciones tristes</h3>
-                        <img src="img/triste-tempo.png" alt="Mi imagen">
-                        <div class="text-card" style="background-color: #353C4E;">
-                            <p>Explicacion</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h3>Canciones neutras</h3>
-                        <img src="img/neutro-tempo.png" alt="Mi imagen">
-                        <div class="text-card" style="background-color: #353C4E;">
-                            <p>Explicacion</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h3>Canciones felices</h3>
-                        <img src="img/feliz-tempo.png" alt="Mi imagen">
-                        <div class="text-card" style="background-color: #353C4E;">
-                            <p>Explicacion</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
+
         <section>
             <div class="container">
                 <h2 style="color: #9CC545;">Modo</h2>
