@@ -14,7 +14,7 @@ body{
 
 section{
     min-height: 100vh;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
 }
@@ -41,6 +41,7 @@ section{
 }
 .text-card {
     margin-top: 50px;
+    align-self: center;
 }
 
 p {
@@ -65,7 +66,8 @@ section:nth-child(3){
 }
 
 section:nth-child(4){
-    color: #fff;
+    color: #1D212B;
+    background: #fff;
 }
 
 section:nth-child(5){
@@ -76,18 +78,6 @@ section:nth-child(6){
     color: #fff;
 }
 
-section:nth-child(7){
-    color: #fff;
-}
-
-section:nth-child(8){
-    color: #1D212B;
-    background: #fff;
-}
-
-section:nth-child(9){
-    color: #ffff;
-}
 
 section .container{
     margin: 100px;
@@ -195,3 +185,69 @@ f{
 }
 
 /* <temp style="color:#E6662C">tempo</temp>, el <mod style="color:#9CC545">modo (escala tonal)</mod>, el <vol style="color:#D26AB0">volumen</vol> y la <ene style="color:#E22C42">energía</ene>. */
+
+
+#scrolly_fotos {
+    position: relative;
+    /* background-color: #cfcf9e; */
+    padding: 1rem;
+ 
+  }
+  
+  #steps_container {
+    position: relative;
+    padding: 0;
+    /* max-width: 400px; */
+    margin: 0 auto;
+  }
+  /* Las fotos por default están ocultas */
+  .foto {
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    max-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+    position: center center;
+    size: cover;
+  }
+  .is_visible {
+    opacity: 1;
+  }
+  
+  #fixed_container {
+    position: sticky;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    transform: translate3d(0, 0, 0);
+    /* background-color: #caa9a9; */
+    z-index: 0;
+    height: 100vh;
+  }
+  
+  .step {
+    margin: 0 auto 2rem auto;
+    color: #fff;
+    height: 100vh;
+    /* border: 1px solid red;  */
+  }
+  
+  .step:last-child {
+    margin-bottom: 0;
+  }
+  
+  
+  .step p {
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    background-color: #353c4ef3;
+  }
+
+  .txt{
+    /* dejar display como preterminado para este id y que no sea none*/
+    display: flex;
+  }
