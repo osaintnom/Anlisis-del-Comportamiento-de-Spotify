@@ -6,14 +6,18 @@
         <title> VD_FINAL_Sentimientos </title>
         <link rel="stylesheet" href="./Styles/style.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/d3@7"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+        <script src="https://unpkg.com/scrollama"></script>
+        <script type="module" src="../Scripts/scroll.js"></script>
     </head>
     <body>
 
-        <section>
+        <section class="txt">
             <h1>La emoción musical y sus aspectos</h1>
             <div id="intro"><p><b>Autores: <a href="https://github.com/osaintnom/VD_FINAL_Sentimientos" style="text-decoration:none;"><t>De Diego</t>, <br><n>Del Toro</n>, <br><f>Saint-Nom</f> </a> </p></b></div>
         </section>
-        <section>
+        <section class="txt">
             <div class="container reveal">
                 <h2>Nuestra idea</h2>
                 <p id="Explicacion-intro"> Tras ver los atributos proporcionados por la API de <b><n>Spotify</n></b>, nos llamó la atención el atributo "valence", el cual refleja la positividad o negatividad emocional de una canción en una escala del 0 al 1. Esto nos inspiró a <b style="font-size: 22px;">explorar cómo nuestras canciones favoritas nos representan sentimentalmente</b>, considerando otros cuatro atributos que caracterizan aún más las emociones en la música: el modo (escala tonal), el tempo, el volumen y la energía.<br> En este artículo, analizaremos estos cuatro atributos en la música que escuchamos como usuarios y determinaremos en qué medida reflejan nuestros sentimientos.
@@ -36,55 +40,43 @@
                 </div>
             </div>
         </section>
-        <section>
-            <div class="container reveal">
-                <div class="cards">
-                    <div class="card">
-                        <h3>Canciones tristes</h3>
-                        <img src="img/grafico_triste.png" alt="Mi imagen">
-                    </div>
-                    <div class="card">
-                        <h3>Canciones neutras</h3>
-                        <img src="img/grafico_neutro.png" alt="Mi imagen">
-                    </div>
-                    <div class="card">
-                        <h3>Canciones felices</h3>
-                        <img src="img/grafico_feliz.png" alt="Mi imagen">
-                    </div>
-                </div>
-                <div class="text-card" style="background-color: #353C4E;">
-                    <p>Explicacion</p>
-                </div>
-            </div>
-        </section>
-        <section>
+        
+        <section id="scrollyn">
             <div class="container">
-                <h2 style="color: #E6662C;">Tempo</h2>
-                <div class="cards">
-                    <div class="card">
-                        <h3>Canciones tristes</h3>
-                        <img src="img/triste-tempo.png" alt="Mi imagen">
-                        <div class="text-card" style="background-color: #353C4E;">
-                            <p>Explicacion</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h3>Canciones neutras</h3>
-                        <img src="img/neutro-tempo.png" alt="Mi imagen">
-                        <div class="text-card" style="background-color: #353C4E;">
-                            <p>Explicacion</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h3>Canciones felices</h3>
-                        <img src="img/feliz-tempo.png" alt="Mi imagen">
-                        <div class="text-card" style="background-color: #353C4E;">
-                            <p>Explicacion</p>
-                        </div>
-                    </div>
-                </div>
+                <section id="scrolly_fotos">    
+                    <figure id="fixed_container">
+                        <img id="foto_0" class="foto" src="img/grafico_0.png" alt="">
+                        <img id="foto_1" class="foto" src="img/grafico_1.png" alt=""> 
+                        <img id="foto_2" class="foto" src="img/grafico_2.png" alt=""> 
+                        <img id="foto_3" class="foto" src="img/grafico_3.png" alt=""> 
+                        <img id="foto_4" class="foto" src="img/grafico_4.png" alt=""> 
+                        
+                    </figure>
+
+                    <article id="steps_container">
+                        <article id="steps_container">
+                            <div class="step" data-step="general">
+                            <p>Explicacion general </p>
+                            </div>
+                            <div class="step" data-step="tempo">
+                                <p>Explicacion tempo</p>
+                            </div>
+                            <div class="step" data-step="modo">
+                                <p>Explicacion modo</p>
+                            </div>
+                            <div class="step" data-step="volumen">
+                                <p>Explicacion volumen</p>
+                            </div>
+                            <div class="step" data-step="energia">
+                                <p>Explicacion energia</p>
+                            </div>
+                    </article>
+
+                </section>
             </div>
         </section>
+
+<!-- 
         <section>
             <div class="container">
                 <h2 style="color: #9CC545;">Modo</h2>
@@ -168,8 +160,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <section>
+        </section> -->
+        <section class="txt">
             <div class="container reveal">
                 <h2>¿Que escuchamos nosotros?</h2>
                 <div class="cards">
@@ -208,18 +200,19 @@
         </div>
         </div>
         </section>
-        <section>
-        <div class="container">
-            <h2>Conclusión</h2>
-            <p>Utilizándonos como ejemplos de prueba, pudimos concluir que los sentimientos tienen un patrón en la música que puede ser medido en <b>elementos técnicos específicos</b> que contribuyen a la expresión emocional en la música.
-                <br><br>Pudimos generalizar emociones fuertes como la <f>felicidad</f> o la <t>tristeza</t> con tan solo 5 atributos y ver hacia dónde se inclinan nuestras personalidades como usuarios. Esto nos permitió entender un poco más el <b>increíble</b> algoritmo de <n>Spotify</n> y su precisión con los gustos de sus usuarios.</p>
-           
-        
-        <section>
+        <section class="txt">
             <div class="container reveal">
                 <h2>Conclusión</h2>
                 <p>Utilizándonos como ejemplos de prueba, pudimos concluir que los sentimientos tienen un patrón en la música que puede ser medido en <b>elementos técnicos específicos</b> que contribuyen a la expresión emocional en la música.
                     <br><br>Pudimos generalizar emociones fuertes como la <f>felicidad</f> o la <t>tristeza</t> con tan solo 5 atributos y ver hacia dónde se inclinan nuestras personalidades como usuarios. Esto nos permitió entender un poco más el <b>increible</b> algoritmo de <n>Spotify</n> y su precisión con los gustos de sus usuarios.</p>
+                <div class="cards">
+                </div>
+            </div>
+        </section>
+        <section class="txt">
+            <div class="container reveal">
+                <h2>Metodologia</h2>
+                <p>BLA BLA BLA</p>
                 <div class="cards">
                 </div>
             </div>
