@@ -116,19 +116,19 @@ section .cards:nth-child(2){
 }
 
 section .cards .text-card:nth-child(1) {
-    background: #10307f;
+    background: #1D212B;
     margin: 20px;
     padding: 20px;
 }
   
 section .cards .text-card:nth-child(2) {
-    background: #4d0f71;
+    background: #1D212B;
     margin: 20px;
     padding: 20px;
 }
   
 section .cards .text-card:nth-child(3) {
-    background: #7f0050;
+    background: #1D212B;
     margin: 20px;
     padding: 20px;
 }
@@ -166,13 +166,13 @@ section .cards .text-card h3{
 
 
 t{
-    color: #10307f;
+    color: #D75757;
 }
 n{
-    color: #4d0f71;
+    color: #E5CA17;
 }
 f{
-    color:#7f0050;
+    color:#63B764;
 }
 
 #intro{
