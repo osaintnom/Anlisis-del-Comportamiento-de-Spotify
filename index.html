@@ -14,28 +14,30 @@
     <body>
 
         <section class="txt">
-            <h1>La emoción musical y sus aspectos</h1>
-            <div id="intro"><p><b>Autores: <a href="https://github.com/osaintnom/VD_FINAL_Sentimientos" style="text-decoration:none;"><t>De Diego</t>, <br><n>Del Toro</n>, <br><f>Saint-Nom</f> </a> </p></b></div>
+            <div class="container">
+                <h1 class="center-title">La emoción musical y sus aspectos</h1>
+                <p> <b>Autores: <a href="https://github.com/osaintnom/VD_FINAL_Sentimientos" style="text-decoration:none;"><t>De Diego</t>, <n>Del Toro</n>, <f>Saint-Nom</f></a></b> </p>
+            </div>
         </section>
+        
+        
         <section class="txt">
             <div class="container reveal">
-                <h2>Nuestra idea</h2>
-                <p id="Explicacion-intro"> Tras ver los atributos proporcionados por la API de <b><n>Spotify</n></b>, nos llamó la atención el atributo "valence", el cual refleja la positividad o negatividad emocional de una canción en una escala del 0 al 1. Esto nos inspiró a <b style="font-size: 22px;">explorar cómo nuestras canciones favoritas nos representan sentimentalmente</b>, considerando otros cuatro atributos que caracterizan aún más las emociones en la música: el modo (escala tonal), el tempo, el volumen y la energía.<br> En este artículo, analizaremos estos cuatro atributos en la música que escuchamos como usuarios y determinaremos en qué medida reflejan nuestros sentimientos.
-                    <br><br>
-                    El análisis se divide en tres categorías principales de valencia: <b><t>baja valencia (0 a 0.33)</t>, <n>valencia moderada (0.33 a 0.66)</n> </b>y <b><f>alta valencia (0.66 a 1)</f></b> dejándonos ver bien los rangos en los cuales se encuentra cada uno de nosotros.</p>
+                <h2>¿Cómo medimos la emoción en la música?</h2>
+                <p class="intro"> En este artículo, se lleva a cabo un estudio sobre las emociones que evocan las canciones. Esto se puede reflejar atraves de la valencia, una medida musical que refleja la positividad o negatividad emocional de una canción. El análisis se divide en tres categorías principales de valencia: <b><t>baja valencia (0 a 0.33)</t>, <n>valencia moderada (0.33 a 0.66)</n> </b>y <b><f>alta valencia (0.66 a 1)</f></b>. Luego se pueden examinar otros cuatro atributos que caracterizan aún más las emociones en la música: el modo (escala tonal), el tempo, el volumen y la energía. </p>
                 <br>
                 <div class="cards">
                     <div class="text-card">
-                        <h3>Tristes</h3>
-                        <p> Esta categoría de canciones representa las canciones con valencia de 0 a 0.33 </p>
+                        <img src="img/triste.png" alt="Tristes" style="width: 110px; height: auto; margin-top: -40px;">
+                        <p class="cajas"> Esta categoría de canciones representa las canciones con valencia de 0 a 0.33 </p>
                     </div>
                     <div class="text-card">
-                        <h3>Neutras</h3>
-                        <p> Esta categoría de canciones representa las canciones con valencia de 0.33 a 0.66 </p>
+                        <img src="img/neutro.png" alt="Neutras" style="width: 110px; height: auto; margin-top: -40px;">
+                        <p class="cajas">Esta categoría de canciones representa las canciones con valencia de 0.33 a 0.66 </p>
                     </div>
                     <div class="text-card">
-                        <h3>Felices</h3>
-                        <p> Esta categoría de canciones representa las canciones con valencia de 0.66 a 1 </p>
+                        <img src="img/feliz.png" alt="Felices" style="width: 110px; height: auto; margin-top: -40px;">
+                        <p class="cajas"> Esta categoría de canciones representa las canciones con valencia de 0.66 a 1 </p>
                     </div>
                 </div>
             </div>
@@ -56,19 +58,19 @@
                     <article id="steps_container">
                         <article id="steps_container">
                             <div class="step" data-step="general">
-                            <p>Explicacion general </p>
+                            <p>En estos graficos se visualizann los 4 atributos analizados: Tempo, modo, volumen y energia para las distintas categorias emocionales vistas. </p>
                             </div>
                             <div class="step" data-step="tempo">
-                                <p>Explicacion tempo</p>
+                                <p>La relación entre el tempo y la valencia revela una conexión positiva, donde las canciones más tristes tienden a tener un tempo más lento.</p>
                             </div>
                             <div class="step" data-step="modo">
-                                <p>Explicacion modo</p>
+                                <p>Se observa una leve correlación con respecto al modo, sugiriendo que las canciones más tristes tienden a tener una mayor escala tonal.</p>
                             </div>
                             <div class="step" data-step="volumen">
-                                <p>Explicacion volumen</p>
+                                <p>Con respecto al volumen de las canciones, se puede notar que las canciones mas felices tienen menor volumen y las mas tristes son las mas altas.</p>
                             </div>
                             <div class="step" data-step="energia">
-                                <p>Explicacion energia</p>
+                                <p>El ultimo atributo indica que a medida que disminuye la valencia, la energía de la canción aumenta.</p>
                             </div>
                     </article>
 
@@ -167,7 +169,7 @@
                 <div class="cards">
                     <div class="text-card">
                         <h3>Valen</h3>
-                        <p>
+                        <p class="cajas">
                             51% tristes <br>
                             26% neutras <br>
                             23% felices
@@ -175,7 +177,7 @@
                     </div>
                     <div class="text-card">
                         <h3>Gerar</h3>
-                        <p>
+                        <p class="cajas">
                             28% tristes <br>
                             56% neutras <br>
                             16% felices
@@ -183,7 +185,7 @@
                     </div>
                     <div class="text-card">
                         <h3>Oli</h3>
-                        <p>
+                        <p class="cajas">
                             30% tristes <br>
                             32% neutras <br>
                             38% felices
@@ -204,15 +206,15 @@
             <div class="container reveal">
                 <h2>Conclusión</h2>
                 <p>Utilizándonos como ejemplos de prueba, pudimos concluir que los sentimientos tienen un patrón en la música que puede ser medido en <b>elementos técnicos específicos</b> que contribuyen a la expresión emocional en la música.
-                    <br><br>Pudimos generalizar emociones fuertes como la <f>felicidad</f> o la <t>tristeza</t> con tan solo 5 atributos y ver hacia dónde se inclinan nuestras personalidades como usuarios. Esto nos permitió entender un poco más el <b>increible</b> algoritmo de <n>Spotify</n> y su precisión con los gustos de sus usuarios.</p>
+                    <br><br>Pudimos generalizar emociones fuertes como la <f>felicidad</f> o la <t>tristeza</t> con tan solo 5 atributos y ver hacia dónde se inclinan nuestras personalidades como usuarios. Esto nos permitió entender un poco más el <b>increible</b> algoritmo de Spotify y su precisión con los gustos de sus usuarios.</p>
                 <div class="cards">
                 </div>
             </div>
         </section>
         <section class="txt">
             <div class="container reveal">
-                <h2>Metodologia</h2>
-                <p>BLA BLA BLA</p>
+                <h2>Metodología</h2>
+                <p>En este estudio, se utilizaron datos proporcionados por la base de datos de Spotify a través de <b>Spotify Developers</b>. Con el objetivo de visualizar de manera más efectiva los atributos analizados, se llevó a cabo un proceso de <i>normalización</i>. Este proceso permitió calcular el porcentaje que cada valor representa en relación con el rango completo de valores posibles, considerando el valor máximo como el 100%. </p>
                 <div class="cards">
                 </div>
             </div>
