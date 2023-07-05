@@ -54,7 +54,7 @@ p {
 
 .cajas {
     text-align: center;
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
     padding-top: 20px; /* Add desired top padding */
     padding-bottom: 20px; /* Add desired bottom padding */
@@ -69,23 +69,34 @@ section:nth-child(2){
     color: #1D212B;
     background: #fff;
 }
-
 section:nth-child(3){
-    color: #fff;
+    color: #1D212B;
+    background: #fff;
 }
 
 section:nth-child(4){
-    color: #1D212B;
-    background: #fff;
+    color: #fff;
 }
 
 section:nth-child(5){
     color: #fff;
 }
-
 section:nth-child(6){
+    color: #1D212B;
+    background: #fff;
+}
+
+section:nth-child(7){
     color: #fff;
 }
+
+section:nth-child(8){
+    color: #fff;
+}
+section:nth-child(9){
+    color: #fff;
+}
+
 
 
 section .container{
@@ -104,34 +115,47 @@ section h2{
 
 section .cards{
     display: flex;
+    /* flex-direction: column; */
 }
 
-/* section .cards:nth-child(1){
+section .cards:nth-child(1){
     display: flex;
+
 }
-*/
+
 section .cards:nth-child(2){
     display: flex;
+    
     margin-left: 25px;
+
 }
 
 section .cards .text-card:nth-child(1) {
     background: #1D212B;
     margin: 20px;
-    padding: 20px;
+    padding: 30px;
+    min-width: 150px;
+    flex: auto;
 }
   
 section .cards .text-card:nth-child(2) {
     background: #1D212B;
     margin: 20px;
-    padding: 20px;
+    padding: 30px;
+    min-width: 150px;
+    flex: auto;
 }
   
 section .cards .text-card:nth-child(3) {
     background: #1D212B;
     margin: 20px;
-    padding: 20px;
+    padding: 30px;
+    min-width: 150px;
+    flex: auto;
+    
 }
+
+
 
 
 section .cards .text-card h3{
@@ -259,6 +283,9 @@ f{
   }
 
   .txt{
-    /* dejar display como preterminado para este id y que no sea none*/
     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
   }
